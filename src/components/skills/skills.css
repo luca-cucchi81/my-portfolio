@@ -1,0 +1,61 @@
+.skills {
+    width: 100%;
+}
+
+.ant-card-head-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #16c79a;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.skill-text {
+    margin-left: 20px;
+}
+
+.skill-text h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.skill-text p {
+    font-size: 15px;
+    font-weight: 00;
+}
+
+.html {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #ea4335;
+}
+
+.css {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #4285f4;
+}
+
+.javascript {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #fbbc05;
+}
+
+.react {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #80ced6;
+}
+
+.php {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #3b5998;
+}
+
+.mysql {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #7b0099;
+}
