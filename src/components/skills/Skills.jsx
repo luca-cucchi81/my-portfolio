@@ -20,7 +20,7 @@ const mySkills = [
     {
         id: 3,
         percent: 80,
-        name: "javascript",
+        name: "js",
         description: "Hands On Experience in Javascript",
         color: "#FBBC05",
     },
@@ -49,27 +49,34 @@ const mySkills = [
 
 function Skills() {
     const gridStyle = {
-        width: "50%",
+        width: "47%",
         display: "flex",
+        justifyContent: "center",
         alignItems: "center",
+        borderRadius: "10px",
+        margin: "10px",
     };
 
     return (
         <div className="skills">
-            <Card data-aos="fade-up" title="My Skills">
+            <Card>
+                <h1>My Skills</h1>
                 {mySkills.map((skill) => {
                     return (
-                        <Card.Grid style={gridStyle} key={skill.id}>
-                            <Progress
-                                type="circle"
-                                percent={skill.percent}
-                                strokeColor={skill.color}
-                            />
-                            <div className="skill-text">
-                                <h2 className={skill.name}>{skill.name}</h2>
-                                <p>{skill.description}</p>
-                            </div>
-                        </Card.Grid>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <Card.Grid style={gridStyle} key={skill.id}>
+                                <Progress
+                                    type="circle"
+                                    percent={skill.percent}
+                                    strokeColor={skill.color}
+                                    strokeWidth={10}
+                                />
+                                <div className="skill-text">
+                                    <h2 className={skill.name}>{skill.name}</h2>
+                                    <p>{skill.description}</p>
+                                </div>
+                            </Card.Grid>
+                        </div>
                     );
                 })}
             </Card>

@@ -1,13 +1,22 @@
 .skills {
-    width: 100%;
+    width: 100vw;
+}
+.ant-card {
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.ant-card-head-title {
-    text-align: center;
-    text-transform: uppercase;
-    color: #16c79a;
-    font-size: 30px;
+.ant-card-body {
+    padding: 0;
+}
+
+.skills h1 {
+    padding-bottom: 40px;
+    font-size: 50px;
     font-weight: 700;
+    color: #16c79a;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .skill-text {
@@ -36,7 +45,7 @@
     color: #4285f4;
 }
 
-.javascript {
+.js {
     margin-bottom: 0;
     text-transform: uppercase;
     color: #fbbc05;
