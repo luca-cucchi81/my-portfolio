@@ -9,6 +9,8 @@ const mySkills = [
         name: "html",
         description: "Hands On Experience in Html",
         color: "#e34c26",
+        aos: "flip-up",
+        aosDelay: 100,
     },
     {
         id: 2,
@@ -16,6 +18,8 @@ const mySkills = [
         name: "css",
         description: "Hands On Experience in CSS",
         color: "#264de4",
+        aos: "flip-up",
+        aosDelay: 300,
     },
     {
         id: 3,
@@ -23,6 +27,8 @@ const mySkills = [
         name: "js",
         description: "Hands On Experience in Javascript",
         color: "#f0db4f",
+        aos: "flip-up",
+        aosDelay: 500,
     },
     {
         id: 4,
@@ -30,6 +36,8 @@ const mySkills = [
         name: "react",
         description: "Hands On Experience in React",
         color: "#61dafb",
+        aos: "flip-up",
+        aosDelay: 700,
     },
     {
         id: 5,
@@ -37,6 +45,8 @@ const mySkills = [
         name: "php",
         description: "Hands On Experience in PHP",
         color: "#8993be",
+        aos: "flip-up",
+        aosDelay: 900,
     },
     {
         id: 6,
@@ -44,6 +54,8 @@ const mySkills = [
         name: "mysql",
         description: "Hands On Experience in Mysql",
         color: "#f29221",
+        aos: "flip-up",
+        aosDelay: 1100,
     },
     {
         id: 7,
@@ -51,6 +63,8 @@ const mySkills = [
         name: "bootstrap",
         description: "Hands On Experience in Bootstrap",
         color: "#6610f2",
+        aos: "flip-up",
+        aosDelay: 1300,
     },
     {
         id: 8,
@@ -58,6 +72,8 @@ const mySkills = [
         name: "wordpress",
         description: "Hands On Experience in Wordpress",
         color: "#016087",
+        aos: "flip-up",
+        aosDelay: 1500,
     },
 ];
 
@@ -76,7 +92,10 @@ function Skills() {
                 <h1>My Skills</h1>
                 {mySkills.map((skill) => {
                     return (
-                        <div data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            data-aos={skill.aos}
+                            data-aos-delay={skill.aosDelay}
+                        >
                             <Card.Grid style={gridStyle} key={skill.id}>
                                 <Progress
                                     type="circle"

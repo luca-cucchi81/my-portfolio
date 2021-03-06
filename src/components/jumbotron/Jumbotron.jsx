@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Button } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
 import "./jumbotron.css";
 import me from "../../assets/luca.jpg";
 
@@ -9,11 +10,10 @@ function Jumbotron() {
             <Row style={{ display: "flex", alignItems: "center" }}>
                 <Col span={16}>
                     <div data-aos="fade-right" className="left">
-                        <p>
-                            <span className="hello">Hello!</span>Luca Cucchi
-                        </p>
-                        <h1>Web Developer</h1>
-                        <small>Front-End Developer using React</small>
+                        <strong className="hello">Hello!!</strong>
+                        <h2>I'm Luca Cucchi</h2>
+                        <h1>Front End Developer</h1>
+                        <small>...and this is my portfolio</small>
                         <div className="buttons">
                             <Button
                                 shape="round"
@@ -29,14 +29,15 @@ function Jumbotron() {
                             </Button>
                             <Button
                                 shape="round"
+                                icon={<DownloadOutlined />}
                                 style={{
-                                    border: "2px solid #16c79a",
+                                    border: 0,
                                     color: "#16c79a",
                                     fontWeight: "500",
                                 }}
                                 size="large"
                             >
-                                Download CV
+                                Resume
                             </Button>
                         </div>
                     </div>

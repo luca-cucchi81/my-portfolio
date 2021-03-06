@@ -6,6 +6,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import "./App.css";
 import Jumbotron from "./components/jumbotron/Jumbotron";
 import Skills from "./components/skills/Skills";
+import Portfolio from "./components/portfolio/Portfolio";
 
 function App() {
     useEffect(() => {
@@ -32,6 +33,15 @@ function App() {
                     offset={6}
                 >
                     <Skills />
+                </Col>
+            </Row>
+            <Row>
+                <Col
+                    style={{ display: "flex", alignItems: "center" }}
+                    span={12}
+                    offset={6}
+                >
+                    <Portfolio />
                 </Col>
             </Row>
         </div>
