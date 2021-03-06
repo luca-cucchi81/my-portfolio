@@ -25,7 +25,7 @@ function Jumbotron() {
                                 }}
                                 size="large"
                             >
-                                Hire me
+                                Contact me
                             </Button>
                             <Button
                                 shape="round"
