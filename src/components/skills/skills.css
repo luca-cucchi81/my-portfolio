@@ -36,35 +36,47 @@
 .html {
     margin-bottom: 0;
     text-transform: uppercase;
-    color: #ea4335;
+    color: #e34c26;
 }
 
 .css {
     margin-bottom: 0;
     text-transform: uppercase;
-    color: #4285f4;
+    color: #264de4;
 }
 
 .js {
     margin-bottom: 0;
     text-transform: uppercase;
-    color: #fbbc05;
+    color: #f0db4f;
 }
 
 .react {
     margin-bottom: 0;
     text-transform: uppercase;
-    color: #80ced6;
+    color: #61dafb;
 }
 
 .php {
     margin-bottom: 0;
     text-transform: uppercase;
-    color: #3b5998;
+    color: #8993be;
 }
 
 .mysql {
     margin-bottom: 0;
     text-transform: uppercase;
-    color: #7b0099;
+    color: #f29221;
+}
+
+.bootstrap {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #6610f2;
+}
+
+.wordpress {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #016087;
 }
