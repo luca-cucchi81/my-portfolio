@@ -73,15 +73,27 @@ function App() {
                     <div className="topDrawer">
                         <img className="avatar" src={avatar} alt="avatar" />
                         <div className="links">
-                            <NavLink to="/" className="nav_link">
+                            <NavLink
+                                to="/"
+                                className="nav_link"
+                                onClick={closeDrawer}
+                            >
                                 Home
                             </NavLink>
 
-                            <NavLink to="/portfolio" className="nav_link">
+                            <NavLink
+                                to="/portfolio"
+                                className="nav_link"
+                                onClick={closeDrawer}
+                            >
                                 Portfolio
                             </NavLink>
 
-                            <NavLink to="/about-me" className="nav_link">
+                            <NavLink
+                                to="/about-me"
+                                className="nav_link"
+                                onClick={closeDrawer}
+                            >
                                 About Me
                             </NavLink>
                         </div>
