@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
-import { Row, Col } from "antd";
+import React, { useEffect, useState } from "react";
+import { Row, Col, Button, Drawer } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -15,8 +16,44 @@ function App() {
         });
     }, []);
 
+    const [visible, setVisible] = useState(false);
+
+    const closeDrawer = () => {
+        setVisible(false);
+    };
+
+    const showDrawer = () => {
+        setVisible(!visible);
+    };
+
     return (
         <div className="app">
+            <Button
+                ghost
+                type="link"
+                size="large"
+                icon={<MenuOutlined />}
+                onClick={showDrawer}
+                style={{
+                    position: "absolute",
+                    top: "10px",
+                    left: "10px",
+                    color: "#fff",
+                }}
+            ></Button>
+            <Drawer
+                placement="left"
+                closable={false}
+                onClose={closeDrawer}
+                visible={visible}
+                bodyStyle={{
+                    background: "linear-gradient(to bottom, #71b280, #134e5e)",
+                }}
+            >
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+            </Drawer>
             <Row className="jumbotron-row">
                 <Col
                     style={{ display: "flex", alignItems: "center" }}
