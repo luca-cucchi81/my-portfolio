@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 import "./jumbotron.css";
-import me from "../../assets/luca.jpg";
+import me from "../../assets/luca.png";
 
 function Jumbotron() {
     return (
@@ -13,7 +13,6 @@ function Jumbotron() {
                         <strong className="hello">Hello!!</strong>
                         <h2>I'm Luca Cucchi</h2>
                         <h1>Front End Developer</h1>
-                        <small>...and this is my portfolio</small>
                         <div className="buttons">
                             <Button
                                 shape="round"

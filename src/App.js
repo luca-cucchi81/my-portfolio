@@ -50,9 +50,8 @@ function App() {
                     background: "linear-gradient(to bottom, #71b280, #134e5e)",
                 }}
             >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                <p>Portfolio</p>
+                <p>About Me</p>
             </Drawer>
             <Row className="jumbotron-row">
                 <Col
