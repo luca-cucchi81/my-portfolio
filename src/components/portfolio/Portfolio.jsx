@@ -10,15 +10,18 @@ function Portfolio() {
                 bordered={false}
                 style={{
                     width: "100%",
-                    height: "90%",
+                    height: "100%",
+                    padding: "0 80px",
                     display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent: "flex-start",
                     alignItems: "center",
+                    backgroundImage: `url(${portfolioLogo})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
                 }}
             >
                 <Row>
                     <Col
-                        span={12}
                         style={{
                             display: "flex",
                             flexDirection: "column",
@@ -26,23 +29,19 @@ function Portfolio() {
                             alignItems: "center",
                         }}
                     >
-                        <h3>My Portfolio</h3>
-                        <h1>Projects</h1>
+                        <h3>My projects</h3>
+                        <h1>Portfolio</h1>
                         <Button
                             shape="round"
                             style={{
                                 backgroundColor: "#16c79a",
                                 color: "#fff",
-                                marginRight: 10,
                                 border: 0,
                             }}
                             size="large"
                         >
                             Take a look!
                         </Button>
-                    </Col>
-                    <Col span={12}>
-                        <img src={portfolioLogo} alt="logo" />
                     </Col>
                 </Row>
             </Card>
