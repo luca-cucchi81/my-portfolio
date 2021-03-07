@@ -73,29 +73,17 @@ function App() {
                     <div className="topDrawer">
                         <img className="avatar" src={avatar} alt="avatar" />
                         <div className="links">
-                            <ul>
-                                <li>
-                                    <NavLink to="/" className="nav_link">
-                                        Home
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/portfolio"
-                                        className="nav_link"
-                                    >
-                                        Portfolio
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/about-me"
-                                        className="nav_link"
-                                    >
-                                        About Me
-                                    </NavLink>
-                                </li>
-                            </ul>
+                            <NavLink to="/" className="nav_link">
+                                Home
+                            </NavLink>
+
+                            <NavLink to="/portfolio" className="nav_link">
+                                Portfolio
+                            </NavLink>
+
+                            <NavLink to="/about-me" className="nav_link">
+                                About Me
+                            </NavLink>
                         </div>
                     </div>
 

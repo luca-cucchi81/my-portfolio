@@ -14,17 +14,17 @@
 
 .links {
     margin-top: 30px;
-    text-align: center;
-}
-
-.links li {
-    margin: 10px 0;
-    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav_link {
     color: #16c79a;
+    font-size: x-large;
     font-weight: 500;
+    margin-top: 20px;
 }
 .nav_link:hover {
     cursor: pointer;
