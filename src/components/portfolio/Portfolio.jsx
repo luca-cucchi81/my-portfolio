@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, Row, Col, Button } from "antd";
+
+/* Stylesheet & image */
 import "./portfolio.css";
 import portfolioLogo from "../../assets/portfolio.jpg";
 

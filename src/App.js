@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
-import "antd/dist/antd.css";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-import "./App.css";
 import Jumbotron from "./components/jumbotron/Jumbotron";
 import Skills from "./components/skills/Skills";
 import Portfolio from "./components/portfolio/Portfolio";
+
+/* Stylesheets */
+import "antd/dist/antd.css";
+import "aos/dist/aos.css";
+import "./App.css";
 
 function App() {
     useEffect(() => {

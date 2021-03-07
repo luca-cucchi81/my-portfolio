@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, Progress } from "antd";
+
+/* Stylesheet */
 import "./skills.css";
 
 const mySkills = [

@@ -1,6 +1,8 @@
 import React from "react";
 import { Row, Col, Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
+
+/* Stylesheet & image */
 import "./jumbotron.css";
 import me from "../../assets/luca.png";
 
