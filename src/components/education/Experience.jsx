@@ -62,6 +62,7 @@ function Experience() {
                                             style={{
                                                 borderRadius: 5,
                                                 margin: "10px 20px",
+                                                padding: 5,
                                             }}
                                         >
                                             <h2>{experience.role}</h2>
