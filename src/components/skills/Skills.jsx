@@ -1,85 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Progress } from "antd";
 
 /* Stylesheet */
 import "./skills.css";
 
-const mySkills = [
-    {
-        id: 1,
-        percent: 80,
-        name: "html",
-        description: "Hands On Experience in Html",
-        color: "#e34c26",
-        aos: "flip-up",
-        aosDelay: 100,
-    },
-    {
-        id: 2,
-        percent: 80,
-        name: "css",
-        description: "Hands On Experience in CSS",
-        color: "#264de4",
-        aos: "flip-up",
-        aosDelay: 300,
-    },
-    {
-        id: 3,
-        percent: 80,
-        name: "js",
-        description: "Hands On Experience in Javascript",
-        color: "#f0db4f",
-        aos: "flip-up",
-        aosDelay: 500,
-    },
-    {
-        id: 4,
-        percent: 60,
-        name: "react",
-        description: "Hands On Experience in React",
-        color: "#61dafb",
-        aos: "flip-up",
-        aosDelay: 700,
-    },
-    {
-        id: 5,
-        percent: 40,
-        name: "php",
-        description: "Hands On Experience in PHP",
-        color: "#8993be",
-        aos: "flip-up",
-        aosDelay: 900,
-    },
-    {
-        id: 6,
-        percent: 40,
-        name: "mysql",
-        description: "Hands On Experience in Mysql",
-        color: "#f29221",
-        aos: "flip-up",
-        aosDelay: 1100,
-    },
-    {
-        id: 7,
-        percent: 80,
-        name: "bootstrap",
-        description: "Hands On Experience in Bootstrap",
-        color: "#6610f2",
-        aos: "flip-up",
-        aosDelay: 1300,
-    },
-    {
-        id: 8,
-        percent: 20,
-        name: "wordpress",
-        description: "Hands On Experience in Wordpress",
-        color: "#016087",
-        aos: "flip-up",
-        aosDelay: 1500,
-    },
-];
-
 function Skills() {
+    const [skills, setSkills] = useState([]);
+
+    const url = "https://api.jsonbin.io/b/6047317a683e7e079c493d01";
+    const getData = () => {
+        fetch(url, {
+            method: "GET",
+            headers: {
+                "secret-key":
+                    "$2b$10$ei9LqaAD9GrCXqghYKzFV.KzL6dGvDG9jxAY7BK7KxS7r.9Df/L16",
+                "Content-Type": "application/json",
+            },
+        })
+            .then((res) => res.json())
+            .then((res) => {
+                setSkills(res);
+            });
+    };
+
     const gridStyle = {
         width: "47%",
         display: "flex",
@@ -88,11 +31,15 @@ function Skills() {
         margin: "10px",
     };
 
+    useEffect(() => {
+        getData();
+    }, []);
+
     return (
         <div className="skills">
             <Card>
                 <h1>My Skills</h1>
-                {mySkills.map((skill) => {
+                {skills.map((skill) => {
                     return (
                         <div
                             data-aos={skill.aos}
