@@ -18,11 +18,12 @@ import "antd/dist/antd.css";
 import "aos/dist/aos.css";
 import "./App.css";
 import avatar from "./assets/avatar.png";
+import Experience from "./components/education/Experience";
 
 function App() {
     useEffect(() => {
         AOS.init({
-            duration: 1000,
+            duration: 1300,
         });
     }, []);
 
@@ -157,6 +158,19 @@ function App() {
                         offset={6}
                     >
                         <Portfolio />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                        span={20}
+                        offset={2}
+                    >
+                        <Experience />
                     </Col>
                 </Row>
             </div>

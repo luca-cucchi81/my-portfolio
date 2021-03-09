@@ -7,7 +7,7 @@ import "./skills.css";
 function Skills() {
     const [skills, setSkills] = useState([]);
 
-    const url = "https://api.jsonbin.io/b/6047317a683e7e079c493d01";
+    const url = "https://api.jsonbin.io/b/60477739683e7e079c49d3c8";
     const getData = () => {
         fetch(url, {
             method: "GET",

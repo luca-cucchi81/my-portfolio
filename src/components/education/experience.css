@@ -1,0 +1,40 @@
+.experience {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.experience h1 {
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #16c79a;
+    text-transform: uppercase;
+}
+
+.experience h2 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #16c79a;
+    text-align: start;
+    text-transform: uppercase;
+}
+
+.experience h4 {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: start;
+    text-transform: uppercase;
+}
+
+.experience p {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: start;
+    color: grey;
+}
+
+.experience-image img {
+    width: 100%;
+    object-fit: contain;
+}
