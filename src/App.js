@@ -19,6 +19,7 @@ import "aos/dist/aos.css";
 import "./App.css";
 import avatar from "./assets/avatar.png";
 import Experience from "./components/education/Experience";
+import Footer from "./components/footer/Footer";
 
 function App() {
     useEffect(() => {
@@ -173,6 +174,8 @@ function App() {
                         <Experience />
                     </Col>
                 </Row>
+
+                <Footer />
             </div>
         </Router>
     );
