@@ -5,8 +5,10 @@ import { Card, Progress } from "antd";
 import "./skills.css";
 
 function Skills() {
+    /* set initial state */
     const [skills, setSkills] = useState([]);
 
+    /* ---- (START) Retrieving data from json ---- */
     const url = "https://api.npoint.io/d92a429b5bab9bc35d28";
     const getData = () => {
         fetch(url, {
@@ -15,11 +17,26 @@ function Skills() {
                 "Content-Type": "application/json",
             },
         })
-            .then((res) => res.json())
+            .then((res) => {
+                if (!res.ok) {
+                    throw Error("ERROR");
+                } else {
+                    return res.json();
+                }
+            })
             .then((res) => {
                 setSkills(res);
+            })
+            .catch((error) => {
+                console.log(error);
             });
     };
+    /* ---- (END) Retrieving data from json */
+
+    /* set new state based on json data */
+    useEffect(() => {
+        getData();
+    }, []);
 
     const gridStyle = {
         width: "47%",
@@ -28,10 +45,6 @@ function Skills() {
         borderRadius: "10px",
         margin: "10px",
     };
-
-    useEffect(() => {
-        getData();
-    }, []);
 
     return (
         <div className="skills">

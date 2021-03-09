@@ -5,8 +5,10 @@ import { Row, Col, Timeline, Radio, Card } from "antd";
 import "./experience.css";
 
 function Experience() {
+    /* set initial state */
     const [experiences, setExperiences] = useState([]);
 
+    /* ---- (START) Retrieving data from json ---- */
     const url = "https://api.npoint.io/7ecaf3f6a6a2da4b7d4d";
     const getExperiencesData = () => {
         fetch(url, {
@@ -15,12 +17,23 @@ function Experience() {
                 "Content-Type": "application/json",
             },
         })
-            .then((res) => res.json())
+            .then((res) => {
+                if (!res.ok) {
+                    throw Error("ERROR");
+                } else {
+                    return res.json();
+                }
+            })
             .then((res) => {
                 setExperiences(res);
+            })
+            .catch((error) => {
+                console.log(error);
             });
     };
+    /* ---- (END) Retrieving data from json ---- */
 
+    /* set new state based on json data */
     useEffect(() => {
         getExperiencesData();
     }, []);
