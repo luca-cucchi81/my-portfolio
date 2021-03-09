@@ -1,12 +1,22 @@
-import React from "react";
-import { Row, Col, Button } from "antd";
-import { DownloadOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
+import { Row, Col, Button, Modal } from "antd";
+import { DownloadOutlined, CloseCircleTwoTone } from "@ant-design/icons";
 
 /* Stylesheet & image */
 import "./jumbotron.css";
 import me from "../../assets/luca.png";
 
 function Jumbotron() {
+    const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const showModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleClose = () => {
+        setIsModalVisible(false);
+    };
+
     return (
         <div className="jumbotron">
             <Row style={{ display: "flex", alignItems: "center" }}>
@@ -25,9 +35,29 @@ function Jumbotron() {
                                     border: 0,
                                 }}
                                 size="large"
+                                onClick={showModal}
                             >
                                 Contact me
                             </Button>
+                            <Modal
+                                closable={true}
+                                closeIcon={
+                                    <CloseCircleTwoTone
+                                        twoToneColor="#16c79a"
+                                        style={{ fontSize: "x-large" }}
+                                    />
+                                }
+                                footer={null}
+                                visible={isModalVisible}
+                                onCancel={handleClose}
+                                width={1000}
+                            >
+                                <div style={{ padding: "20px 10px" }}>
+                                    <p>Some contents...</p>
+                                    <p>Some contents...</p>
+                                    <p>Some contents...</p>
+                                </div>
+                            </Modal>
                             <Button
                                 shape="round"
                                 icon={<DownloadOutlined />}

@@ -30,3 +30,7 @@ h2 {
 .buttons {
     margin-top: 20px;
 }
+
+.ant-modal {
+    border-radius: 10px !important;
+}
