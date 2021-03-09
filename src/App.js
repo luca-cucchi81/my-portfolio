@@ -47,7 +47,6 @@ function App() {
         <Router>
             <div className="app">
                 <Button
-                    ghost
                     type="link"
                     size="large"
                     icon={<MenuOutlined />}

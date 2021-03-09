@@ -7,13 +7,11 @@ import "./skills.css";
 function Skills() {
     const [skills, setSkills] = useState([]);
 
-    const url = "https://api.jsonbin.io/b/60477739683e7e079c49d3c8";
+    const url = "https://api.npoint.io/d92a429b5bab9bc35d28";
     const getData = () => {
         fetch(url, {
             method: "GET",
             headers: {
-                "secret-key":
-                    "$2b$10$ei9LqaAD9GrCXqghYKzFV.KzL6dGvDG9jxAY7BK7KxS7r.9Df/L16",
                 "Content-Type": "application/json",
             },
         })
@@ -42,10 +40,11 @@ function Skills() {
                 {skills.map((skill) => {
                     return (
                         <div
+                            key={skill.id}
                             data-aos={skill.aos}
                             data-aos-delay={skill.aosDelay}
                         >
-                            <Card.Grid style={gridStyle} key={skill.id}>
+                            <Card.Grid style={gridStyle}>
                                 <Progress
                                     type="circle"
                                     percent={skill.percent}

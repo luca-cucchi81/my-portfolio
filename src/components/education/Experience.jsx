@@ -7,13 +7,11 @@ import "./experience.css";
 function Experience() {
     const [experiences, setExperiences] = useState([]);
 
-    const url = "https://api.jsonbin.io/b/60477e157ea6546cf3d82ddd/2";
+    const url = "https://api.npoint.io/7ecaf3f6a6a2da4b7d4d";
     const getExperiencesData = () => {
         fetch(url, {
             method: "GET",
             headers: {
-                "secret-key":
-                    "$2b$10$ei9LqaAD9GrCXqghYKzFV.KzL6dGvDG9jxAY7BK7KxS7r.9Df/L16",
                 "Content-Type": "application/json",
             },
         })
@@ -48,6 +46,7 @@ function Experience() {
                             {experiences.map((experience) => {
                                 return (
                                     <Timeline.Item
+                                        key={experience.id}
                                         color="#16c79a"
                                         style={{
                                             color: "#fff",
