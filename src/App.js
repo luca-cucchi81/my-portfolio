@@ -173,7 +173,6 @@ function App() {
                         <Experience />
                     </Col>
                 </Row>
-
                 <Footer />
             </div>
         </Router>

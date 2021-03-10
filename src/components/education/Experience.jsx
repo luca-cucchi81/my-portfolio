@@ -9,7 +9,7 @@ function Experience() {
     const [experiences, setExperiences] = useState([]);
 
     /* ---- (START) Retrieving data from json ---- */
-    const url = "https://api.npoint.io/7ecaf3f6a6a2da4b7d4d";
+    const url = "https://api.npoint.io/40465bf15d1e5c339f91";
     const getExperiencesData = () => {
         fetch(url, {
             method: "GET",

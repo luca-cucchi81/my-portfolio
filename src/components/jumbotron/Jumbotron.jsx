@@ -5,6 +5,7 @@ import { DownloadOutlined, CloseCircleTwoTone } from "@ant-design/icons";
 /* Stylesheet & image */
 import "./jumbotron.css";
 import me from "../../assets/luca.png";
+import MailForm from "../mail-sender/MailForm";
 
 function Jumbotron() {
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -40,22 +41,26 @@ function Jumbotron() {
                                 Contact me
                             </Button>
                             <Modal
+                                title="Contact Me"
                                 closable={true}
                                 closeIcon={
                                     <CloseCircleTwoTone
-                                        twoToneColor="#16c79a"
-                                        style={{ fontSize: "x-large" }}
+                                        twoToneColor="red"
+                                        style={{ fontSize: "large" }}
                                     />
                                 }
+                                destroyOnClose={true}
+                                maskClosable={false}
                                 footer={null}
                                 visible={isModalVisible}
                                 onCancel={handleClose}
-                                width={1000}
+                                bodyStyle={{
+                                    padding: "20px 10px",
+                                }}
+                                width={600}
                             >
-                                <div style={{ padding: "20px 10px" }}>
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
+                                <div>
+                                    <MailForm />
                                 </div>
                             </Modal>
                             <Button
